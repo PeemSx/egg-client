@@ -57,6 +57,7 @@ export const SigninForm = () => {
               },
               body: JSON.stringify(formData),
               mode: 'cors',
+              credentials: 'include',
             })
             if(response.ok){
               const {user,message,token} = await response.json();

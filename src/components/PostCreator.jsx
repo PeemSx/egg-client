@@ -34,6 +34,7 @@ export const PostCreator = () => {
           },
           body: JSON.stringify(formData),
           mode: 'cors',
+          credentials: 'include',
         })
         if(response.ok){
 

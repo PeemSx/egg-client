@@ -70,6 +70,7 @@ export const SignupForm = () => {
           },
           body: JSON.stringify(formData),
           mode: 'cors',
+          credentials: 'include',
         })
         if(response.ok){
           navigate('/login')
