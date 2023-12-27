@@ -1,4 +1,4 @@
 
-const URL = 'https://egg-api.onrender.com'
+const URL = 'http://localhost:10000'
 
 export default URL;

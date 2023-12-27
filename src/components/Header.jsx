@@ -18,8 +18,11 @@ export const Header = () => {
   const display_nav = directories.map((path) => {
     str = path.charAt(0).toUpperCase() + path.slice(1);
     return <li key={path} className={`${location.pathname === `/${path}` ? `${li_prop}` : 'text-white'}`}>
-
-      <Link to = {isAuth ? path : "/signin"} >{str}</Link>
+      { isAuth && location.pathname === `/${path}` ?
+          <button>{str}</button> 
+          
+          : <Link to = {(isAuth) ? path :"/signin"} >{str}</Link>
+      }
     </li>
     }
   );

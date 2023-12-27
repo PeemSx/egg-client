@@ -62,7 +62,7 @@ export const PostCreator = () => {
           <input type='text' name='title' className='focus:border-none focus:outline-none focus:ring-0 rounded-full px-3 py-1 w-1/4' placeholder='title...' onChange={handleChange}></input>
           <textarea 
             style={{height : '60vh'}}
-            maxLength={2750}
+            maxLength={600}
             type='text' 
             name='content'
             className='focus:border-none focus:outline-none focus:ring-0 rounded-2xl px-3 py-2 h-1/2 resize-none' 

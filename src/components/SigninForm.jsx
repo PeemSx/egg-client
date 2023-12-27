@@ -62,10 +62,13 @@ export const SigninForm = () => {
             if(response.ok){
               const {user,message,token} = await response.json();
               setServerMsg(message);
-              console.log("Login Successful:");
               setUserData(user);
+
+              console.log("Login Successful:");
+
               localStorage.setItem('userData',JSON.stringify(user));
-              localStorage.setItem('token',token);  
+              localStorage.setItem('token',token);
+
               navigate('/');
             }else{
               console.log("Failed to Login")
