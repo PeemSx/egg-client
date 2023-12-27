@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { ModalPassword } from './ModalPassword';
 import { Link, useNavigate } from 'react-router-dom';
+import URL from "../constants/urlApi"
 
 
 export const SignupForm = () => {
@@ -63,14 +64,13 @@ export const SignupForm = () => {
      
       console.log(formData);
       try {
-        const response = await fetch("https://egg_api.onrender.com/users",{
+        const response = await fetch(`${URL}/users`,{
           method: 'POST',
           headers : {
             'Content-Type' : 'application/json',
           },
           body: JSON.stringify(formData),
-          mode: 'cors',
-          credentials: 'include',
+
         })
         if(response.ok){
           navigate('/login')

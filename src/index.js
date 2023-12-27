@@ -4,12 +4,9 @@ import './index.css';
 import App from './App';
 import {disableReactDevTools} from '@fvilers/disable-react-devtools'
 
+import { createBrowserRouter,RouterProvider } from "react-router-dom";
 
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
 
 import { SigninPage } from './pages/SiginPage';
 import { LoginPage } from './pages/LoginPage';

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import URL from '../constants/urlApi';
 // import { useNavigate } from 'react-router-dom'
 export const PostCreator = () => {
   const userJSONstr = localStorage.getItem('userData')
@@ -27,14 +28,13 @@ export const PostCreator = () => {
     }else {
       console.log(formData);
       try {
-        const response = await fetch("https://egg_api.onrender.com/blogs",{
+        const response = await fetch(`${URL}/blogs`,{
           method: 'POST',
           headers : {
             'Content-Type' : 'application/json',
           },
           body: JSON.stringify(formData),
-          mode: 'cors',
-          credentials: 'include',
+
         })
         if(response.ok){
 

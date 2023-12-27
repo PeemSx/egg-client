@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
 import { useNavigate  } from 'react-router-dom';
-
+import URL from '../constants/urlApi';
 export const SigninForm = () => {
     const FormHeigh = {
         height: '70vh'
@@ -50,14 +50,14 @@ export const SigninForm = () => {
 
           console.log(formData);
           try {
-            const response = await fetch("https://egg_api.onrender.com/users/login",{
+            const response = await fetch(`${URL}/users/login`,{
               method: 'POST',
               headers : {
                 'Content-Type' : 'application/json',
               },
               body: JSON.stringify(formData),
-              mode: 'cors',
-              credentials: 'include',
+         
+            
             })
             if(response.ok){
               const {user,message,token} = await response.json();
