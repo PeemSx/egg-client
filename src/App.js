@@ -8,12 +8,15 @@ import { BlogPages } from './pages/BlogPages';
 import './App.css'
 function App() {
   return (
+    <div className='App'>
+
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/signin" element={<SigninPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/blogs" element={<BlogPages />} />
     </Routes>
+    </div>
   );
 }
 
