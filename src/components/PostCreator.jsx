@@ -54,6 +54,7 @@ export const PostCreator = () => {
   }
 
 
+
   return (
     <div className='bg-yellow-500 mx-3  rounded-3xl my-4 flex flex-col items-center p-4'>
       <form style={{height : '80vh'}} className='flex flex-col w-full' onSubmit={handleSubmit}>
